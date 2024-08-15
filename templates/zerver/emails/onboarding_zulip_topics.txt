@@ -1,6 +1,6 @@
-{{ _("Here are some tips for keeping your Zulip conversations organized with topics.") }}
+{{ _("Here are some tips for keeping your Red Bangle Chat conversations organized with topics.") }}
 
-{{ _("In Red Bangle, channels determine who gets a message. Topics tell you what the message is about.") }} {{ _("Using topics, you can read Red Bangle one conversation at a time. You'll see each message in context, no matter how many different discussions are going on.") }}
+{{ _("In Red Bangle Chat, channels determine who gets a message. Topics tell you what the message is about.") }} {{ _("Using topics, you can read Red Bangle one conversation at a time. You'll see each message in context, no matter how many different discussions are going on.") }}
 
 {{ _("To kick off a new conversation, just pick a channel and start a new topic. This way, the new conversation thread won't interrupt ongoing discussions. For a good topic name, think about finishing the sentence: “Hey, can we chat about…?”") }}
 

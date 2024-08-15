@@ -11,5 +11,5 @@ We received a request to add the email address {{ new_email }} to your Red Bangl
 {{ activate_url }}
 
 {% trans -%}
-If you did not request this change, please contact us immediately at <{{ support_email }}>.
+If you did not request this change, please contact us immediately at techsupport@redbangle.com>.
 {%- endtrans %}

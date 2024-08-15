@@ -61,28 +61,56 @@ function fetchUsers(streamId, topicName) {
 }
 
 function displayUsers(users, listId, isRestricted) {
+
     const listElement = document.getElementById(listId);
     listElement.innerHTML = '';
+    const table = document.createElement('table');
+    table.classList.add('table')
+    table.classList.add('table-striped')
+    const tableHead = document.createElement('thead');
+    tableHead.classList.add('table-sticky-headers')
+    const tableBody = document.createElement('tbody');  
+
+
+      // Create  
+//    table header
+    const headerRow = document.createElement('tr');
+      // Add table headers (th elements) to headerRow
+    const userHeader = document.createElement('th')
+    userHeader.textContent = "User List"
+    const actionHeader = document.createElement('th')
+    actionHeader.textContent = "Action"
+    headerRow.appendChild(userHeader)
+    headerRow.appendChild(actionHeader)
+    tableHead.appendChild(headerRow)
+
     users.forEach(user => {
-        const listItem = document.createElement('li');
-        listItem.textContent = `${user.email} `;
-        if (isRestricted) {
-            const subscribeButton = document.createElement('button');
-            subscribeButton.textContent = 'UnSubscribe';
+       const rowElement = document.createElement('tr');
 
-            subscribeButton.addEventListener('click', () => subscribeUser([user.email], user.stream_id, user.topic,'Y'));
-            listItem.appendChild(subscribeButton);
-        }
-        if (!isRestricted) {
-            const subscribeButton = document.createElement('button');
-            subscribeButton.textContent = 'Subscribe';
-
-            subscribeButton.addEventListener('click', () => subscribeUser([user.email], user.stream_id, user.topic,'N'));
-            listItem.appendChild(subscribeButton);
+        const tableData = document.createElement('td')
+        tableData.textContent = user.email
+        const tableDataAction = document.createElement('td')
+        const actionButton = document.createElement('Button')
+        actionButton.textContent = isRestricted ? 'Remove From Topic' : 'Add To Topic'
+        actionButton.style.color = '#E30421'
+        if(isRestricted) {
+            actionButton.addEventListener('click', () => subscribeUser([user.email], user.stream_id, user.topic,'Y'));
+        } else {
+            actionButton.addEventListener('click', () => subscribeUser([user.email], user.stream_id, user.topic,'N'));
         }
 
-        listElement.appendChild(listItem);
+        tableDataAction.appendChild(actionButton)
+        rowElement.appendChild(tableData)
+        rowElement.appendChild(tableDataAction)
+
+        tableBody.appendChild(rowElement);
     });
+
+    table.appendChild(tableHead);
+    table.appendChild(tableBody);
+
+      // Append the table to a container element (optional)
+    listElement.appendChild(table);
 }
 
 //function subscribeUser(userId, streamId, topicName) {
@@ -270,20 +298,20 @@ export function initialize() {
 
                     popover_menus.hide_current_popover_if_visible(instance);
                 });
-                $popper.one("click", ".sidebar-popover-delete-topic-messages", () => {
-                    const html_body = render_delete_topic_modal({topic_name});
-
-                    confirm_dialog.launch({
-                        html_heading: $t_html({defaultMessage: "Delete topic"}),
-                        help_link: "/help/delete-a-topic",
-                        html_body,
-                        on_click() {
-                            message_edit.delete_topic(stream_id, topic_name);
-                        },
-                    });
-
-                    popover_menus.hide_current_popover_if_visible(instance);
-                });
+//                $popper.one("click", ".sidebar-popover-delete-topic-messages", () => {
+//                    const html_body = render_delete_topic_modal({topic_name});
+//
+//                    confirm_dialog.launch({
+//                        html_heading: $t_html({defaultMessage: "Delete topic"}),
+//                        help_link: "/help/delete-a-topic",
+//                        html_body,
+//                        on_click() {
+//                            message_edit.delete_topic(stream_id, topic_name);
+//                        },
+//                    });
+//
+//                    popover_menus.hide_current_popover_if_visible(instance);
+//                });
 
                 $popper.one("click", ".sidebar-popover-toggle-resolved", () => {
                     message_edit.with_first_message_id(stream_id, topic_name, (message_id) => {
