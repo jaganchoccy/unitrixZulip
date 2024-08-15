@@ -1,1 +1,1 @@
-{% trans %}Red Bangle email changed for {{ realm_name }}{% endtrans %}
+{% trans %}Red Bangle Chat email changed for {{ realm_name }}{% endtrans %}

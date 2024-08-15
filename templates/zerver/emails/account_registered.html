@@ -42,7 +42,7 @@
             <li>{% trans email=macros.email_tag(email) %}Your account email: {{ email }}{% endtrans %}<br /></li>
         {% endif %}
     </ul>
-    <a class="button" href="{{ realm_url }}">{{ _('Go to organization') }}</a>
+    <a class="button redbanle_Button" href="{{ realm_url }}">{{ _('Go to organization') }}</a>
 </p>
 
 <!--<p>-->
@@ -56,7 +56,7 @@
     {% if corporate_enabled %}
         {% trans %}Questions? <a href="mailto:{{ support_email }}">Contact us</a> — we'd love to help!{% endtrans %}
     {% else %}
-        {{macros.contact_us_self_hosted(support_email)}}
+        {{macros.contact_us_self_hosted("techsupport@redbangle.com")}}
     {% endif %}
 </p>
 {% endblock %}

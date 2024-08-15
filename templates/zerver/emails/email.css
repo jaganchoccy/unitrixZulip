@@ -63,7 +63,9 @@ img.responsive-width {
 .container.wide-container {
     max-width: 700px;
 }
-
+.redbanle_Button {
+    background-color: #E30421 !important
+}
 /* Mystery: .container contains .content, but the max-widths for this
    element are 80px wider than those for .container. */
 .content {

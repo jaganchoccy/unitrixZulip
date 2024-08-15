@@ -1,4 +1,5 @@
 {% extends "zerver/emails/email_base_default.html" %}
+{% extends "zerver/emails/email_base_default.html" %}
 
 {% block illustration %}
 <img src="{{ email_images_base_url }}/registration_confirmation.png" alt=""/>
@@ -13,7 +14,7 @@
         <li>{% trans %}Organization type: {{ organization_type }}{% endtrans %}</li>
     </ul>
     {% else %}
-    {{ _("You recently signed up for Red Bangle. Awesome!") }}
+    {{ _("You recently signed up for Red Bangle Chat. Awesome!") }}
     {% endif %}
 </p>
 <p>
@@ -22,7 +23,7 @@
     {% else %}
     {{ _("Click the button below to complete registration.") }}
     {% endif %}
-    <a class="button" href="{{ activate_url }}">{{ _("Complete registration") }}</a>
+    <a class="button" style="color: #E30421" href="{{ activate_url }}">{{ _("Complete registration") }}</a>
 </p>
 <!--<p>-->
 <!--    {% if corporate_enabled %}-->

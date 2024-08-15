@@ -1,2 +1,2 @@
-{{ _("As you are getting started with Zulip, we'd love to help you discover how it can work best for your needs. Check out this guide to key Zulip features for organizations like yours!") }}
+{{ _("As you are getting started with Red Bangle Chat, we'd love to help you discover how it can work best for your needs.") }}
 

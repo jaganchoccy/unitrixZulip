@@ -33,7 +33,7 @@
 
 
 {% if corporate_enabled %}
-    {% trans %}Questions? Contact us at {{ support_email }} — we'd love to help!{% endtrans %}
+    {% trans %}Questions? Contact us at techsupport@redbangle.com — we'd love to help!{% endtrans %}
 {% else %}
     {% trans %}If you have any questions, please contact this Zulip server's administrators at {{ support_email }}.{% endtrans %}
 {% endif %}

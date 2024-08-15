@@ -120,7 +120,7 @@ def topic_restriction_detail(request, pk=None):
             stream = Stream.objects.get(id=stream_id)
 
             User = get_user_model()
-            subscriptions = Subscription.objects.filter(recipient=stream.recipient)
+            subscriptions = Subscription.objects.filter(recipient=stream.recipient, active=True)
             subscribed_users = User.objects.filter(subscription__in=subscriptions)
             restricted_users = subscribed_users.filter(topicrestriction__stream=stream,
                                                        topicrestriction__topic=topic)

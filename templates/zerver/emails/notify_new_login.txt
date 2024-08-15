@@ -14,5 +14,5 @@
 {{ _("If this was you, great! There's nothing else you need to do.") }}
 
 
-{{ _("Thanks,") }}
-{{ _("Red Bangle Security") }}
+{{ _("Cheers,") }}
+{{ _("Team Red Bangle") }}
