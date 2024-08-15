@@ -215,3 +215,4 @@ ALLOW_ANONYMOUS_GROUP_VALUED_SETTINGS = True
 # This value needs to be lower in development than usual to allow
 # for quicker testing of the feature.
 RESOLVE_TOPIC_UNDO_GRACE_PERIOD_SECONDS = 5
+SERVER_NAME = "Red Bangle"
