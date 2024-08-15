@@ -210,6 +210,7 @@ export function initialize(): void {
 
 export function initialize_left_sidebar(): void {
     const rendered_sidebar = render_left_sidebar({
+        is_admin: current_user.is_admin,
         is_guest: current_user.is_guest,
         development_environment: page_params.development_environment,
         is_inbox_home_view:
