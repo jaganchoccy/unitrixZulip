@@ -41,7 +41,8 @@ export function close(): void {
 export function _build_direct_messages_list(): vdom.Tag<PMNode> {
     const conversations = pm_list_data.get_conversations();
     const pm_list_info = pm_list_data.get_list_info(zoomed);
-    const conversations_to_be_shown = pm_list_info.conversations_to_be_shown;
+    var conversations_to_be_converted = pm_list_info.conversations_to_be_shown;
+    const conversations_to_be_shown = conversations_to_be_converted.filter(message => message.recipients !== "Welcome Bot");
     const more_conversations_unread_count = pm_list_info.more_conversations_unread_count;
 
     const pm_list_nodes = conversations_to_be_shown.map((conversation) =>
