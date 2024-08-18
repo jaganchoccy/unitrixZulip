@@ -5,7 +5,7 @@
         <div id="org-org-profile" class="settings-subsection-parent">
             <div class="subsection-header">
                 <h3>{{t "Organization profile" }}
-                    {{> ../help_link_widget link="/help/create-your-organization-profile" }}
+{{!--                     {{> ../help_link_widget link="/help/create-your-organization-profile" }} --}}
                 </h3>
                 {{> settings_save_discard_widget section_name="org-profile" }}
             </div>
@@ -19,19 +19,19 @@
                 </div>
                 <div class="input-group admin-realm">
                     <label for="realm_org_type" class="settings-field-label">{{t "Organization type" }}
-                        {{> ../help_link_widget link="/help/organization-type" }}
+{{!--                         {{> ../help_link_widget link="/help/organization-type" }} --}}
                     </label>
                     <select name="realm_org_type" class="setting-widget prop-element settings_select bootstrap-focus-style" id="id_realm_org_type" data-setting-widget-type="number">
                         {{> dropdown_options_widget option_values=realm_org_type_values}}
                     </select>
                 </div>
-                {{> settings_checkbox
-                  setting_name="realm_want_advertise_in_communities_directory"
-                  prefix="id_"
-                  is_checked=realm_want_advertise_in_communities_directory
-                  is_disabled=disable_want_advertise_in_communities_directory
-                  label=admin_settings_label.realm_want_advertise_in_communities_directory
-                  help_link="/help/communities-directory"}}
+{{!--                 {{> settings_checkbox --}}
+{{!--                   setting_name="realm_want_advertise_in_communities_directory" --}}
+{{!--                   prefix="id_" --}}
+{{!--                   is_checked=realm_want_advertise_in_communities_directory --}}
+{{!--                   is_disabled=disable_want_advertise_in_communities_directory --}}
+{{!--                   label=admin_settings_label.realm_want_advertise_in_communities_directory --}}
+{{!--                   help_link="/help/communities-directory"}} --}}
                 <div class="input-group admin-realm">
                     <label for="realm_description" class="settings-field-label">{{t "Organization description" }}</label>
                     <textarea id="id_realm_description" name="realm_description" class="admin-realm-description setting-widget prop-element settings_textarea"
@@ -56,7 +56,7 @@
 
         <div class="subsection-header">
             <h3>{{t "Organization logo" }}
-                {{> ../help_link_widget link="/help/create-your-organization-profile#add-a-wide-logo" }}
+{{!--                 {{> ../help_link_widget link="/help/create-your-organization-profile#add-a-wide-logo" }} --}}
             </h3>
             {{> upgrade_tip_widget }}
         </div>
@@ -84,7 +84,7 @@
         </div>
         <h3 class="light">
             {{t "Deactivate organization" }}
-            {{> ../help_link_widget link="/help/deactivate-your-organization" }}
+{{!--             {{> ../help_link_widget link="/help/deactivate-your-organization" }} --}}
         </h3>
         <div class="deactivate-realm-section">
             <div class="input-group">

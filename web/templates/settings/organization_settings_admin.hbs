@@ -13,7 +13,7 @@
                       setting_value=realm_default_language_name
                       language_code=realm_default_language_code
                       section_title=admin_settings_label.realm_default_language
-                      help_link_widget_link="/help/configure-organization-language"}}
+                      }}
                 </div>
 
                 {{> ../dropdown_widget_with_label
@@ -70,7 +70,7 @@
         <div id="org-message-retention" class="settings-subsection-parent">
             <div class="subsection-header">
                 <h3>{{t "Message retention" }}
-                    {{> ../help_link_widget link="/help/message-retention-policy" }}
+{{!--                     {{> ../help_link_widget link="/help/message-retention-policy" }} --}}
                 </h3>
                 {{> settings_save_discard_widget section_name="message-retention" }}
             </div>
@@ -104,60 +104,60 @@
         </div>
 
         <div id="org-other-settings" class="settings-subsection-parent">
-            <div class="subsection-header">
-                <h3>{{t "Other settings" }}</h3>
-                {{> settings_save_discard_widget section_name="other-settings" }}
-            </div>
-            <div class="inline-block organization-settings-parent">
-                <div class="input-group">
-                    <label for="realm_video_chat_provider" class="settings-field-label">
-                        {{t 'Call provider' }}
-                        {{> ../help_link_widget link="/help/start-a-call" }}
-                    </label>
-                    <select name="realm_video_chat_provider" class ="setting-widget prop-element settings_select bootstrap-focus-style" id="id_realm_video_chat_provider" data-setting-widget-type="number">
-                        {{#each realm_available_video_chat_providers}}
-                            <option value='{{this.id}}'>{{this.name}}</option>
-                        {{/each}}
-                    </select>
+{{!--             <div class="subsection-header"> --}}
+{{!--                 <h3>{{t "Other settings" }}</h3> --}}
+{{!--                 {{> settings_save_discard_widget section_name="other-settings" }} --}}
+{{!--             </div> --}}
+{{!--             <div class="inline-block organization-settings-parent"> --}}
+{{!--                 <div class="input-group"> --}}
+{{!--                     <label for="realm_video_chat_provider" class="settings-field-label"> --}}
+{{!--                         {{t 'Call provider' }} --}}
+{{!--                         {{> ../help_link_widget link="/help/start-a-call" }} --}}
+{{!--                     </label> --}}
+{{!--                     <select name="realm_video_chat_provider" class ="setting-widget prop-element settings_select bootstrap-focus-style" id="id_realm_video_chat_provider" data-setting-widget-type="number"> --}}
+{{!--                         {{#each realm_available_video_chat_providers}} --}}
+{{!--                             <option value='{{this.id}}'>{{this.name}}</option> --}}
+{{!--                         {{/each}} --}}
+{{!--                     </select> --}}
 
-                    <div class="dependent-settings-block" id="realm_jitsi_server_url_setting">
-                        <div>
-                            <label for="id_realm_jitsi_server_url" class="settings-field-label">
-                                {{t "Jitsi server URL" }}
-                                {{> ../help_link_widget link="/help/start-a-call#configure-a-self-hosted-instance-of-jitsi-meet" }}
-                            </label>
-                            <select name="realm_jitsi_server_url" id="id_realm_jitsi_server_url" class="setting-widget prop-element settings_select bootstrap-focus-style" data-setting-widget-type="jitsi-server-url-setting">
-                                {{#if server_jitsi_server_url}}
-                                    <option value="server_default">
-                                        {{#tr}}{server_jitsi_server_url} (default){{/tr}}
-                                    </option>
-                                {{else}}
-                                    <option value="server_default">{{t 'Disabled' }}</option>
-                                {{/if}}
-                                <option value="custom">{{t 'Custom URL' }}</option>
-                            </select>
-                        </div>
+{{!--                     <div class="dependent-settings-block" id="realm_jitsi_server_url_setting"> --}}
+{{!--                         <div> --}}
+{{!--                             <label for="id_realm_jitsi_server_url" class="settings-field-label"> --}}
+{{!--                                 {{t "Jitsi server URL" }} --}}
+{{!--                                 {{> ../help_link_widget link="/help/start-a-call#configure-a-self-hosted-instance-of-jitsi-meet" }} --}}
+{{!--                             </label> --}}
+{{!--                             <select name="realm_jitsi_server_url" id="id_realm_jitsi_server_url" class="setting-widget prop-element settings_select bootstrap-focus-style" data-setting-widget-type="jitsi-server-url-setting"> --}}
+{{!--                                 {{#if server_jitsi_server_url}} --}}
+{{!--                                     <option value="server_default"> --}}
+{{!--                                         {{#tr}}{server_jitsi_server_url} (default){{/tr}} --}}
+{{!--                                     </option> --}}
+{{!--                                 {{else}} --}}
+{{!--                                     <option value="server_default">{{t 'Disabled' }}</option> --}}
+{{!--                                 {{/if}} --}}
+{{!--                                 <option value="custom">{{t 'Custom URL' }}</option> --}}
+{{!--                             </select> --}}
+{{!--                         </div> --}}
 
-                        <div>
-                            <label for="id_realm_jitsi_server_url_custom_input" class="jitsi_server_url_custom_input_label">
-                                {{t 'URL' }}
-                            </label>
-                            <input type="text" id="id_realm_jitsi_server_url_custom_input" autocomplete="off"
-                              name="realm_jitsi_server_url_custom_input" class="realm_jitsi_server_url_custom_input settings_url_input" maxlength="200" />
-                        </div>
-                    </div>
-                </div>
-                <div class="input-group">
-                    <label for="realm_giphy_rating" class="settings-field-label">
-                        {{t 'GIPHY integration' }}
-                        {{> ../help_link_widget link=giphy_help_link }}
-                    </label>
-                    <select name="realm_giphy_rating" class ="setting-widget prop-element settings_select bootstrap-focus-style" id="id_realm_giphy_rating" data-setting-widget-type="number" {{#if giphy_api_key_empty}}disabled{{/if}}>
-                        {{#each giphy_rating_options}}
-                            <option value='{{this.id}}'>{{this.name}}</option>
-                        {{/each}}
-                    </select>
-                </div>
+{{!--                         <div> --}}
+{{!--                             <label for="id_realm_jitsi_server_url_custom_input" class="jitsi_server_url_custom_input_label"> --}}
+{{!--                                 {{t 'URL' }} --}}
+{{!--                             </label> --}}
+{{!--                             <input type="text" id="id_realm_jitsi_server_url_custom_input" autocomplete="off" --}}
+{{!--                               name="realm_jitsi_server_url_custom_input" class="realm_jitsi_server_url_custom_input settings_url_input" maxlength="200" /> --}}
+{{!--                         </div> --}}
+{{!--                     </div> --}}
+{{!--                 </div> --}}
+{{!--                 <div class="input-group"> --}}
+{{!--                     <label for="realm_giphy_rating" class="settings-field-label"> --}}
+{{!--                         {{t 'GIPHY integration' }} --}}
+{{!--                         {{> ../help_link_widget link=giphy_help_link }} --}}
+{{!--                     </label> --}}
+{{!--                     <select name="realm_giphy_rating" class ="setting-widget prop-element settings_select bootstrap-focus-style" id="id_realm_giphy_rating" data-setting-widget-type="number" {{#if giphy_api_key_empty}}disabled{{/if}}> --}}
+{{!--                         {{#each giphy_rating_options}} --}}
+{{!--                             <option value='{{this.id}}'>{{this.name}}</option> --}}
+{{!--                         {{/each}} --}}
+{{!--                     </select> --}}
+{{!--                 </div> --}}
 
 
                 {{> ../dropdown_widget_with_label
@@ -184,7 +184,7 @@
                   prefix="id_"
                   is_checked=realm_inline_image_preview
                   label=admin_settings_label.realm_inline_image_preview
-                  help_link="/help/allow-image-link-previews"}}
+                  }}
                 {{/if}}
 
                 {{#if server_inline_url_embed_preview}}
@@ -193,7 +193,7 @@
                   prefix="id_"
                   is_checked=realm_inline_url_embed_preview
                   label=admin_settings_label.realm_inline_url_embed_preview
-                  help_link="/help/allow-image-link-previews"}}
+                  }}
                 {{/if}}
             </div>
         </div>
