@@ -17,7 +17,7 @@ const SPECTATOR_STREAM_NARROW_BANNER = {
     title: "",
     html: $t_html(
         {
-            defaultMessage: "This is not a <z-link>publicly accessible</z-link> conversation.",
+            defaultMessage: "This is not a publicly accessible conversation.",
         },
         {
             "z-link": (content_html) =>
@@ -170,7 +170,7 @@ function pick_empty_narrow_banner(): NarrowBannerData {
                 title: $t({defaultMessage: "None of your messages have emoji reactions yet."}),
                 html: $t_html(
                     {
-                        defaultMessage: "Learn more about emoji reactions <z-link>here</z-link>.",
+                        defaultMessage: "Try to add some",
                     },
                     {
                         "z-link": (content_html) =>
@@ -198,7 +198,7 @@ function pick_empty_narrow_banner(): NarrowBannerData {
                         html: $t_html(
                             {
                                 defaultMessage:
-                                    "Learn more about starring messages <z-link>here</z-link>.",
+                                    "Try to star some of the important message.",
                             },
                             {
                                 "z-link": (content_html) =>
@@ -213,7 +213,7 @@ function pick_empty_narrow_banner(): NarrowBannerData {
                         title: $t({defaultMessage: "You haven't been mentioned yet!"}),
                         html: $t_html(
                             {
-                                defaultMessage: "Learn more about mentions <z-link>here</z-link>.",
+                                defaultMessage: "Learn more about mentions here.",
                             },
                             {
                                 "z-link": (content_html) =>
