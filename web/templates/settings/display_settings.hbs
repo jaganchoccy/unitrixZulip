@@ -46,7 +46,7 @@
                             <span>{{this.text}}</span>
                             {{#if (eq this.key "google-blob")}}
                             <span>(<em>{{t "deprecated" }}</em>)</span>
-                            {{> ../help_link_widget link="/help/emoji-and-emoticons#change-your-emoji-set" }}
+{{!--                             {{> ../help_link_widget link="/help/emoji-and-emoticons#change-your-emoji-set" }} --}}
                             {{/if}}
                         </div>
                         <span class="right">
@@ -86,7 +86,7 @@
 
         <div class="input-group">
             <label for="web_mark_read_on_scroll_policy" class="settings-field-label">{{t "Automatically mark messages as read" }}
-                {{> ../help_link_widget link="/help/marking-messages-as-read" }}
+{{!--                 {{> ../help_link_widget link="/help/marking-messages-as-read" }} --}}
             </label>
             <select name="web_mark_read_on_scroll_policy" class="setting_web_mark_read_on_scroll_policy prop-element settings_select bootstrap-focus-style" id="{{prefix}}web_mark_read_on_scroll_policy"  data-setting-widget-type="number">
                 {{> dropdown_options_widget option_values=web_mark_read_on_scroll_policy_values}}
@@ -126,7 +126,7 @@
 
         <div class="input-group thinner setting-next-is-related">
             <label for="web_home_view" class="settings-field-label">{{t "Home view" }}
-                {{> ../help_link_widget link="/help/configure-home-view" }}
+{{!--                 {{> ../help_link_widget link="/help/configure-home-view" }} --}}
             </label>
             <select name="web_home_view" class="setting_web_home_view prop-element settings_select bootstrap-focus-style" id="{{prefix}}web_home_view" data-setting-widget-type="string">
                 {{> dropdown_options_widget option_values=web_home_view_values}}
@@ -141,7 +141,7 @@
 
         <div class="input-group">
             <label for="demote_inactive_streams" class="settings-field-label">{{t "Demote inactive channels" }}
-                {{> ../help_link_widget link="/help/manage-inactive-channels" }}
+{{!--                 {{> ../help_link_widget link="/help/manage-inactive-channels" }} --}}
             </label>
             <select name="demote_inactive_streams" class="setting_demote_inactive_streams prop-element settings_select bootstrap-focus-style" id="{{prefix}}demote_inactive_streams"  data-setting-widget-type="number">
                 {{> dropdown_options_widget option_values=demote_inactive_streams_values}}

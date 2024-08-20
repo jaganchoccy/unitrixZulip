@@ -45,7 +45,7 @@
                 <div class="input-group time-limit-setting">
                     <label for="realm_waiting_period_threshold" class="settings-field-label">
                         {{t "Waiting period before new members turn into full members" }}
-                        {{> ../help_link_widget link="/help/restrict-permissions-of-new-members" }}
+{{!--                         {{> ../help_link_widget link="/help/restrict-permissions-of-new-members" }} --}}
                     </label>
                     <select name="realm_waiting_period_threshold" id="id_realm_waiting_period_threshold" class="prop-element settings_select bootstrap-focus-style" data-setting-widget-type="time-limit">
                         {{> dropdown_options_widget option_values=waiting_period_threshold_dropdown_values}}
@@ -101,7 +101,7 @@
                 </div>
                 <div class="input-group">
                     <label for="realm_wildcard_mention_policy" class="settings-field-label">{{t "Who can notify a large number of users with a wildcard mention" }}
-                        {{> ../help_link_widget link="/help/restrict-wildcard-mentions" }}
+{{!--                         {{> ../help_link_widget link="/help/restrict-wildcard-mentions" }} --}}
                     </label>
                     <select name="realm_wildcard_mention_policy" id="id_realm_wildcard_mention_policy" class="prop-element settings_select bootstrap-focus-style" data-setting-widget-type="number">
                         {{> dropdown_options_widget option_values=wildcard_mention_policy_values}}
@@ -113,7 +113,7 @@
         <div id="org-msg-editing" class="settings-subsection-parent">
             <div class="subsection-header">
                 <h3>{{t "Message editing" }}
-                    {{> ../help_link_widget link="/help/restrict-message-editing-and-deletion" }}
+{{!--                     {{> ../help_link_widget link="/help/restrict-message-editing-and-deletion" }} --}}
                 </h3>
                 {{> settings_save_discard_widget section_name="msg-editing" }}
             </div>
@@ -155,7 +155,7 @@
         <div id="org-moving-msgs" class="settings-subsection-parent">
             <div class="subsection-header">
                 <h3>{{t "Moving messages" }}
-                    {{> ../help_link_widget link="/help/restrict-moving-messages" }}
+{{!--                     {{> ../help_link_widget link="/help/restrict-moving-messages" }} --}}
                 </h3>
                 {{> settings_save_discard_widget section_name="moving-msgs" }}
             </div>
@@ -214,7 +214,7 @@
         <div id="org-msg-deletion" class="settings-subsection-parent">
             <div class="subsection-header">
                 <h3>{{t "Message deletion" }}
-                    {{> ../help_link_widget link="/help/delete-a-message" }}
+{{!--                     {{> ../help_link_widget link="/help/delete-a-message" }} --}}
                 </h3>
                 {{> settings_save_discard_widget section_name="msg-deletion" }}
             </div>
@@ -257,7 +257,7 @@
         <div id="org-user-identity" class="settings-subsection-parent">
             <div class="subsection-header">
                 <h3>{{t "User identity" }}
-                    {{> ../help_link_widget link="/help/restrict-name-and-email-changes" }}
+{{!--                     {{> ../help_link_widget link="/help/restrict-name-and-email-changes" }} --}}
                 </h3>
                 {{> settings_save_discard_widget section_name="user-identity" }}
             </div>
@@ -339,7 +339,7 @@
 
                 <div class="input-group">
                     <label for="realm_private_message_policy" class="settings-field-label">{{t "Who can use direct messages" }} ({{t "beta" }})
-                        {{> ../help_link_widget link="/help/restrict-direct-messages" }}
+{{!--                         {{> ../help_link_widget link="/help/restrict-direct-messages" }} --}}
                     </label>
                     <select name="realm_private_message_policy" class="setting-widget prop-element settings_select bootstrap-focus-style" id="id_realm_private_message_policy" data-setting-widget-type="number">
                         {{> dropdown_options_widget option_values=private_message_policy_values}}
