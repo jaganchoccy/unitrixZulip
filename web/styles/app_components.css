@@ -166,18 +166,18 @@ input::placeholder {
         }
 
         &.sea-green {
-            color: hsl(156deg 41% 40%);
-            border-color: hsl(156deg 28% 70%);
+            color: #E30421;
+            border-color: #E30421;
 
             &:hover,
             &:focus {
-                border-color: hsl(156deg 30% 50%);
+                border-color: #E30421;
             }
 
             &:active {
-                border-color: hsl(156deg 30% 40%);
-                color: hsl(156deg 44% 43%);
-                background-color: hsl(154deg 33% 96%);
+                border-color: #E30421;
+                color: #E30421;
+                background-color: #E30421;
             }
         }
 

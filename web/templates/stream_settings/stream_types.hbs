@@ -11,7 +11,7 @@
     <div class="input-group stream-privacy-values">
         <div class="alert stream-privacy-status"></div>
         <label>{{t 'Who can access the channel?'}}
-            {{> ../help_link_widget link="/help/channel-permissions" }}
+{{!--             {{> ../help_link_widget link="/help/channel-permissions" }} --}}
         </label>
 
         <div class="stream-privacy_choices prop-element" id="id_stream_privacy" data-setting-widget-type="radio-group" data-setting-choice-type="string">
@@ -26,21 +26,20 @@
         </div>
     </div>
 
-    {{#if ask_to_announce_stream}}
-        <div id="announce-new-stream">
-            {{>announce_stream_checkbox }}
-        </div>
-    {{/if}}
+{{!--     {{#if ask_to_announce_stream}} --}}
+{{!--         <div id="announce-new-stream"> --}}
+{{!--             {{>announce_stream_checkbox }} --}}
+{{!--         </div> --}}
+{{!--     {{/if}} --}}
 
-    <div class="default-stream">
-        {{> ../settings/settings_checkbox
-          prefix="id_"
-          setting_name="is_default_stream"
-          is_checked=check_default_stream
-          label=(t "Default channel for new users")
-          help_link="/help/set-default-channels-for-new-users"
-          }}
-    </div>
+{{!--     <div class="default-stream"> --}}
+{{!--         {{> ../settings/settings_checkbox --}}
+{{!--           prefix="id_" --}}
+{{!--           setting_name="is_default_stream" --}}
+{{!--           is_checked=check_default_stream --}}
+{{!--           label=(t "Default channel for new users") --}}
+{{!--           }} --}}
+{{!--     </div> --}}
 </div>
 
 <div class="advanced-configurations-container stream-permissions {{#if is_stream_edit}}settings-subsection-parent{{/if}}">
@@ -55,7 +54,7 @@
 
         <div class="input-group">
             <label class="dropdown-title">{{t 'Who can post to the channel?'}}
-                {{> ../help_link_widget link="/help/stream-sending-policy" }}
+{{!--                 {{> ../help_link_widget link="/help/stream-sending-policy" }} --}}
             </label>
             <select name="stream-post-policy" class="stream_post_policy_setting prop-element settings_select bootstrap-focus-style" id="id_stream_post_policy" data-setting-widget-type="number">
                 {{#each stream_post_policy_values}}
@@ -75,7 +74,7 @@
             <div>
                 <div class="input-group inline-block message-retention-setting-group time-limit-setting">
                     <label class="dropdown-title">{{t "Message retention period" }}
-                        {{> ../help_link_widget link="/help/message-retention-policy" }}
+{{!--                         {{> ../help_link_widget link="/help/message-retention-policy" }} --}}
                     </label>
 
                     {{> ../settings/upgrade_tip_widget}}
