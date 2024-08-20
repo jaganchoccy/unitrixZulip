@@ -16,7 +16,7 @@
         <h1 class="lead">{{ _("Internal server error") }}</h1>
         <p>
             {% trans %}
-            Your Zulip chat cannot be loaded because the server is experiencing technical difficulties.
+            Your Red Bangle chat cannot be loaded because the server is experiencing technical difficulties.
             {% endtrans %}
         </p>
         <p>
@@ -25,7 +25,7 @@
             {% endtrans %}
             {% if corporate_enabled %}
                 {% trans %}
-                In the meantime, you can <a href="mailto:{{support_email}}">contact Zulip support</a>.
+                In the meantime, you can <a href="mailto:{{support_email}}">contact Red Bangle  support</a>.
                 {% endtrans %}
             {% else %}
                 {% trans %}
@@ -35,12 +35,12 @@
             {% endif %}
         </p>
         {% if not corporate_enabled %}
-            <p>
-                {% trans troubleshooting_url="https://zulip.readthedocs.io/en/latest/production/troubleshooting.html" %}
-                If you administer this server, you may want to check out the
-                <a href="{{troubleshooting_url}}">Zulip server troubleshooting guide</a>.
-                {% endtrans %}
-            </p>
+<!--            <p>-->
+<!--                {% trans troubleshooting_url="https://zulip.readthedocs.io/en/latest/production/troubleshooting.html" %}-->
+<!--                If you administer this server, you may want to check out the-->
+<!--                <a href="{{troubleshooting_url}}">Zulip server troubleshooting guide</a>.-->
+<!--                {% endtrans %}-->
+<!--            </p>-->
         {% endif %}
     </div>
 </div>
